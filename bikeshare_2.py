@@ -39,7 +39,7 @@ def find_most_popular(ds):
     Find the most popular of data serie
 
     Args:
-        (ds) 
+        (ds) data serie wants to find the most popular
     Returns:
         most_popular_value: the most popular value based on inputted data serie
         count_most_popular_value = count of the most popular value    
