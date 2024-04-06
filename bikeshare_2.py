@@ -167,17 +167,17 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-    # TO DO: display most commonly used start station
+    # display most commonly used start station
     popular_start_station, count_popular_start_station = find_most_popular(df['Start Station'])
     
     print('Most Popular Start Station:', popular_start_station, '. Count:', count_popular_start_station)
 
-    # TO DO: display most commonly used end station
+    # display most commonly used end station
     popular_end_station, count_popular_end_station = find_most_popular(df['End Station'])
     
     print('Most Popular End Station:', popular_end_station, '. Count:', count_popular_end_station)
 
-    # TO DO: display most frequent combination of start station and end station trip
+    # display most frequent combination of start station and end station trip
     df['combine_start_station_end_station'] = df['Start Station'] + " to " + df['End Station']
     popular_combination, count_popular_combination = find_most_popular(df['combine_start_station_end_station'])
     
@@ -193,12 +193,12 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
+    # display total travel time
     total_travel_time = (df['Trip Duration'].sum()) / (60 * 60)
     
     print("Total travel time:", total_travel_time, "hr(s)")
 
-    # TO DO: display mean travel time
+    # display mean travel time
     mean_travel_time = (df['Trip Duration'].mean()) / (60)
     
     print("Mean travel time:", mean_travel_time, "min")
@@ -213,7 +213,7 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
+    # Display counts of user types
     count_user_types = df['User Type'].value_counts()
     dict_count_user_types = count_user_types.to_dict()
     
@@ -221,7 +221,7 @@ def user_stats(df):
     for key, value in dict_count_user_types.items():
         print('+', key,":", value)
         
-    # TO DO: Display counts of gender
+    # Display counts of gender
     try:
         count_gender = df['Gender'].value_counts()
         dict_count_gender = count_gender.to_dict()
@@ -232,7 +232,7 @@ def user_stats(df):
     except (KeyError):
         print('Thero no Gender column. Skip this statistics')
               
-    # TO DO: Display earliest, most recent, and most common year of birth
+    # Display earliest, most recent, and most common year of birth
     try:
         print('Earliest year of birth:', int(df['Birth Year'].min()))
         print('Most recent year of birth:', int(df['Birth Year'].max()))
