@@ -247,9 +247,6 @@ def user_stats(df):
 def main():
     while True:
         city, month, day = get_filters()
-        #city = 'chicago'
-        #month = 'all'
-        #day = 'all'
         
         df = load_data(city, month, day)
         
